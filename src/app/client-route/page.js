@@ -1,5 +1,15 @@
 "use client"
 
-export default function ClientRoutePage() {
-    return <h1>Page</h1>
+import { serverSideFunction } from "../utils/server-utils";
+export default function ClientRoute() {
+    console.log("Client route rendered");
+    
+
+  const result = serverSideFunction();
+  return (
+    <>
+        <h1>ClientRoutePage</h1>
+        <p>{result}</p>
+    </>
+  )
 }
