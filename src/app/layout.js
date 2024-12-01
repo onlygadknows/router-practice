@@ -6,6 +6,15 @@ const geistSans = localFont({
   variable: "--font-geist-sans",
   weight: "100 900",
 });
+const domesticPrison = localFont({
+  src: "../../public/fonts/DomesticPrison.ttf", // Path relative to public folder
+  variable: "--font-domestic",
+  weight: "100 900",
+});
+
+
+
+
 const geistMono = localFont({
   src: "./fonts/GeistMonoVF.woff",
   variable: "--font-geist-mono",
@@ -21,10 +30,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${domesticPrison.variable} antialiased`}
       >
         {children}
-      </body>
+      </body> 
     </html>
   );
 }
